@@ -17,7 +17,7 @@ public class RollerCoasterTest {
 
     @Before
     public void setUp() {
-        rollerCoaster = new RollerCoaster("Boke-aramma", 12);
+        rollerCoaster = new RollerCoaster("Boke-aramma", 12, 8.40);
         visitorUnderAge = new Visitor(11, 1.2, 40.0);
         visitorUnderAgeTall = new Visitor(11, 2.2, 40.0);
         visitorOverAge = new Visitor(24, 1.2, 40.0);
@@ -55,4 +55,8 @@ public class RollerCoasterTest {
     }
 
 
+    @Test
+    public void getPrice() {
+        assertEquals(8.4, rollerCoaster.getPrice(), 0.2);
+    }
 }
