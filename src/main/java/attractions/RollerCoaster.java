@@ -5,9 +5,8 @@ import behaviours.ITicketed;
 import people.Visitor;
 
 
-public class RollerCoaster  extends Attraction implements ISecurity, ITicketed {
+public class RollerCoaster extends Attraction implements ISecurity, ITicketed {
 
-    private Visitor visitor;
     private Double price;
 
     public RollerCoaster(String name, int rating, Double price) {
@@ -36,7 +35,7 @@ public class RollerCoaster  extends Attraction implements ISecurity, ITicketed {
         if (visitor.getHeight() > 1.99){
             price = price * 2;
         }
-        else price = price;
+        else return price;
         return price;
     }
 

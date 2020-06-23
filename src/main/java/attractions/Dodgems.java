@@ -6,7 +6,6 @@ import people.Visitor;
 
 public class Dodgems extends Attraction implements IReviewed, ITicketed {
 
-    private Visitor visitor;
     private Double price;
 
 
