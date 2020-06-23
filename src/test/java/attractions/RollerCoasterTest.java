@@ -13,7 +13,7 @@ public class RollerCoasterTest {
     Visitor visitorUnderAge;
     Visitor visitorUnderAgeTall;
     Visitor visitorOverAge;
-    Visitor visitorOverAgeSmall;
+    Visitor visitorOverAgeTall;
 
     @Before
     public void setUp() {
@@ -21,6 +21,7 @@ public class RollerCoasterTest {
         visitorUnderAge = new Visitor(11, 1.2, 40.0);
         visitorUnderAgeTall = new Visitor(11, 2.2, 40.0);
         visitorOverAge = new Visitor(24, 1.2, 40.0);
+        visitorOverAgeTall = new Visitor(24, 2.2, 400.0);
     }
 
     @Test
@@ -48,6 +49,10 @@ public class RollerCoasterTest {
         assertFalse(rollerCoaster.isAllowedTo(visitorOverAge));
     }
 
+    @Test
+    public void checkVisitorIsOldEnoughAndTallEnough__OverAgeTall() {
+        assertTrue(rollerCoaster.isAllowedTo(visitorOverAgeTall));
+    }
 
 
 }
