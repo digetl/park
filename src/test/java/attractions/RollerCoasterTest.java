@@ -19,6 +19,7 @@ public class RollerCoasterTest {
     public void setUp() {
         rollerCoaster = new RollerCoaster("Boke-aramma", 12);
         visitorUnderAge = new Visitor(14, 1.2, 40.0);
+        visitorUnderAgeTall = new Visitor(14, 2.2, 40.0);
     }
 
     @Test
@@ -34,6 +35,11 @@ public class RollerCoasterTest {
     @Test
     public void checkVisitorIsOldEnoughAndTallEnough__UnderAge() {
         assertFalse(rollerCoaster.isAllowedTo(visitorUnderAge));
+    }
+
+    @Test
+    public void checkVisitorIsOldEnoughAndTallEnough__UnderAgeTall() {
+        assertFalse(rollerCoaster.isAllowedTo(visitorUnderAgeTall));
     }
 
 
