@@ -59,4 +59,10 @@ public class RollerCoasterTest {
     public void getPrice() {
         assertEquals(8.4, rollerCoaster.getPrice(), 0.2);
     }
+
+    @Test
+    public void checkIfVisitorIsTall() {
+        rollerCoaster.priceFor(visitorOverAgeTall);
+        assertEquals(16.80, rollerCoaster.getPrice(), 0.2);
+    }
 }

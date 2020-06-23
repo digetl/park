@@ -7,7 +7,8 @@ import people.Visitor;
 
 public class RollerCoaster  extends Attraction implements ISecurity, ITicketed {
 
-     Double price;
+    private Visitor visitor;
+    private Double price;
 
     public RollerCoaster(String name, int rating, Double price) {
         super(name, rating);
@@ -31,10 +32,9 @@ public class RollerCoaster  extends Attraction implements ISecurity, ITicketed {
     }
 
     @Override
-    public Double priceFor(Double visitor) {
+    public Double priceFor(Visitor visitor) {
         return null;
     }
 
-    ;
 
 }
