@@ -25,4 +25,9 @@ public class RollerCoasterTest {
         assertEquals("Boke-aramma", rollerCoaster.getName());
     }
 
+    @Test
+    public void hasRating() {
+        assertEquals(12, rollerCoaster.getRating());
+    }
+
 }
